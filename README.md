@@ -1,11 +1,22 @@
-## Vibrate Plugin for Xamarin and Windows
-Simple and elegant way to trigger the vibration on a device in your Xamarin.iOS, Xamarin.Android, Windows, and Xamarin.Forms projects.
+## ![](Common/circle_image_icon.png)Circle Image Control Plugin for Xamarin.Forms
 
-### Setup
-* Available on NuGet: https://www.nuget.org/packages/Xam.Plugins.Vibrate [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Vibrate.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Vibrate/)
+Simple but elegant way of display circle images in your Xamarin.Forms projects
+
+#### Setup
+* Available on NuGet: https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Forms.ImageCircle.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle/)
 * Install into your PCL project and Client projects.
+* 
+Build status: [![Build status](https://ci.appveyor.com/api/projects/status/igydt07o7nonlk3u?svg=true)](https://ci.appveyor.com/project/JamesMontemagno/imagecircleplugin)
 
-Build status: [![Build status](https://ci.appveyor.com/api/projects/status/pm68wxtxmudjiml1?svg=true)](https://ci.appveyor.com/project/JamesMontemagno/vibrateplugin)
+
+In your iOS, Android, and Windows projects call:
+
+```
+Xamarin.Forms.Init();//platform specific init
+ImageCircleRenderer.Init();
+```
+
+You must do this AFTER you call Xamarin.Forms.Init();
 
 **Platform Support**
 
@@ -13,47 +24,76 @@ Build status: [![Build status](https://ci.appveyor.com/api/projects/status/pm68w
 | ------------------- | :-----------: | :------------------: |
 |Xamarin.iOS|Yes|iOS 7+|
 |Xamarin.iOS Unified|Yes|iOS 7+|
-|Xamarin.Android|Yes|API 10+|
+|Xamarin.Android|Yes|API 14+|
 |Windows Phone Silverlight|Yes|8.0+|
 |Windows Phone RT|Yes|8.1+|
-|Windows Store RT|---|8.1+|
+|Windows Store RT|Yes|8.1+|
 |Windows 10 UWP|Yes|10+|
-|Xamarin.Mac|No||
+|Xamarin.Mac|---||
 
+#### Usage
+Instead of using an Image simply use a CircleImage instead!
 
-### API Usage
-
-To gain access to the Vibrate class simply use this method:
-
-```csharp
-var v = CrossVibrate.Current;
-v.Vibration(1000); // 1 second vibration
+You **MUST** set the width & height requests to the same value and you will want to use AspectFill. Here is a sample:
+```
+new CircleImage
+{
+  BorderColor = Color.White,
+  BorderThickness = 3,
+  HeightRequest = 150,
+  WidthRequest = 150,
+  Aspect = Aspect.AspectFill,
+  HorizontalOptions = LayoutOptions.Center,
+  Source = UriImageSource.FromUri(new Uri("http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG"))
+}
 ```
 
-#### Methods
+**XAML:**
 
-```csharp
-/// <summary>
-/// Vibrate the phone for specified amount of time
-/// </summary>
-/// <param name="milliseconds">Time in Milliseconds to vibrate. 500ms is default</param>
-void Vibration(int milliseconds = 500);
+First add the xmlns namespace:
+```xml
+xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+```
+
+Then add the xaml:
+
+```xml
+<controls:CircleImage Source="{Binding Image}" Aspect="AspectFill">
+  <controls:CircleImage.WidthRequest>
+    <OnPlatform x:TypeArguments="x:Double"
+      iOS="55"
+      Android="55"
+      WinPhone="75"/>
+   </controls:CircleImage.WidthRequest>
+<controls:CircleImage.HeightRequest>
+    <OnPlatform x:TypeArguments="x:Double"
+      iOS="55"
+      Android="55"
+      WinPhone="75"/>
+   </controls:CircleImage.HeightRequest>
+</controls:CircleImage>
 ```
 
 
-#### Platform Tweaks
+**Bindable Properties**
 
-**iOS**
-There is no API to vibrate for a specific amount of time, so it will vibrate for the default time the system specifies (around 500 milliseconds..
+You are able to set the ```BorderColor``` to a Forms.Color to display a border around your image and also ```BorderThickness``` for how thick you want it. 
 
-**Android**
-The `android.permission.VIBRATE` permission will automatically be added for you into your AndroidManifest.xml
+You can also set ```FillColor``` to the Forms.Color to fill the circle. DO NOT set ```BackgroundColor``` as that will be the square the entire image takes up.
 
+These are supported in iOS, Android, WinRT, and UWP (not on Windows Phone 8 Silverlight).
 
-#### Contributions
-Contributions are welcome! If you find a bug please report it and if you want a feature please report it.
+**Final Builds**
+For linking you may need to add:
 
-If you want to contribute code please file an issue and create a branch off of the current dev branch and file a pull request.
+Android:
+
+ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android;
+
+iOS:
+
+--linkskip=ImageCircle.Forms.Plugin.iOS --linkskip=ImageCircle.Forms.Plugin.Abstractions
+
 
 #### License
-Under MIT, see LICENSE file.
+Licensed under MIT, see license file
