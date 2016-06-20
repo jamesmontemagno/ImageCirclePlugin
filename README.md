@@ -1,4 +1,4 @@
-## ![](Common/circle_image_icon.png)Circle Image Control Plugin for Xamarin.Forms
+## Circle Image Control Plugin for Xamarin.Forms
 
 Simple but elegant way of display circle images in your Xamarin.Forms projects
 
