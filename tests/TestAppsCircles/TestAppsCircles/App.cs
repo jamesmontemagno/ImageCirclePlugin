@@ -59,7 +59,7 @@ namespace TestAppsCircles
                         WidthRequest = 150,
                         Aspect = Aspect.AspectFill,
                         HorizontalOptions = LayoutOptions.Center,
-                        //Source = UriImageSource.FromUri(new Uri("http://upload.wikimedia.org/wikipedia/commons/e/ed/Saguinus_tripartitus_-_Golden-mantled_Tamarin.jpg"))
+                        Source = UriImageSource.FromUri(new Uri("http://upload.wikimedia.org/wikipedia/commons/e/ed/Saguinus_tripartitus_-_Golden-mantled_Tamarin.jpg"))
                       },
                       new CircleImage
                       {

@@ -21,15 +21,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCircle.Forms.Plugin.UW
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestApps", "TestApps", "{8B3D14AA-B08A-4B12-9DCA-1D27014255F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.Droid", "..\src\TestAppsCircles\TestAppsCircles.Droid\TestAppsCircles.Droid.csproj", "{239BA275-B4A4-46C8-B87A-BF5975F88EFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.Droid", "TestAppsCircles\TestAppsCircles.Droid\TestAppsCircles.Droid.csproj", "{239BA275-B4A4-46C8-B87A-BF5975F88EFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.iOS", "..\src\TestAppsCircles\TestAppsCircles.iOS\TestAppsCircles.iOS.csproj", "{61C3066C-0237-4606-8434-F5626ACAF29E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.iOS", "TestAppsCircles\TestAppsCircles.iOS\TestAppsCircles.iOS.csproj", "{61C3066C-0237-4606-8434-F5626ACAF29E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.WinPhone", "..\src\TestAppsCircles\TestAppsCircles.WinPhone\TestAppsCircles.WinPhone.csproj", "{844B9E44-F6E3-490F-8AD7-BBD070010086}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.WinPhone", "TestAppsCircles\TestAppsCircles.WinPhone\TestAppsCircles.WinPhone.csproj", "{844B9E44-F6E3-490F-8AD7-BBD070010086}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TestAppsCircles", "..\src\TestAppsCircles\TestAppsCircles\TestAppsCircles.shproj", "{FD4E1F85-421F-4C06-9752-4FADED914F17}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TestAppsCircles", "TestAppsCircles\TestAppsCircles\TestAppsCircles.shproj", "{FD4E1F85-421F-4C06-9752-4FADED914F17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.UWP", "..\src\TestAppsCircles\TestAppsCircles.UWP\TestAppsCircles.UWP.csproj", "{2E67D1A4-B517-4D89-9F49-6E3D048CD781}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.UWP", "TestAppsCircles\TestAppsCircles.UWP\TestAppsCircles.UWP.csproj", "{2E67D1A4-B517-4D89-9F49-6E3D048CD781}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
