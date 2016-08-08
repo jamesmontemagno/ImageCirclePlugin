@@ -113,7 +113,55 @@ namespace ImageCircle.Forms.Plugin.WindowsPhoneRT
 
                 file = Element.Source;
 
-                var handler = GetHandler(file);
+                BitmapImage bitmapImage = null;
+
+                // Handle file images
+                if (file is FileImageSource)
+                {
+                    var fi = Element.Source as FileImageSource;
+                    var myFile = System.IO.Path.Combine(Package.Current.InstalledLocation.Path, fi.File);
+                    var myFolder = await StorageFolder.GetFolderFromPathAsync(System.IO.Path.GetDirectoryName(myFile));
+
+                    using (Stream s = await myFolder.OpenStreamForReadAsync(System.IO.Path.GetFileName(myFile)))
+                    {
+                        var memStream = new MemoryStream();
+                        await s.CopyToAsync(memStream);
+                        memStream.Position = 0;
+                        bitmapImage = new BitmapImage();
+                        bitmapImage.SetSource(memStream.AsRandomAccessStream());
+                    }
+                }
+                else if (file is UriImageSource)
+                {
+                    bitmapImage = new BitmapImage((Element.Source as UriImageSource).Uri);
+                }
+                else if(file is StreamImageSource)
+                {
+                    var handler = new StreamImagesourceHandler();
+                    var imageSource = await handler.LoadImageAsync(file);
+
+                    if (imageSource != null)
+                    {
+                        Control.Fill = new ImageBrush
+                        {
+                            ImageSource = imageSource,
+                            Stretch = Stretch.UniformToFill,
+                        };
+                    }
+                    return;
+                }
+
+                if (bitmapImage != null)
+                {
+                    Control.Fill = new ImageBrush
+                    {
+                        ImageSource = bitmapImage,
+                        Stretch = Stretch.UniformToFill,
+
+                    };
+                }
+
+                /*var handler = GetHandler(file);
                 var imageSource = await handler.LoadImageAsync(file);
 
                 if (imageSource != null)
@@ -123,7 +171,7 @@ namespace ImageCircle.Forms.Plugin.WindowsPhoneRT
                         ImageSource = imageSource,
                         Stretch = Stretch.UniformToFill,
                     };
-                }
+                }*/
             }
             catch
             {

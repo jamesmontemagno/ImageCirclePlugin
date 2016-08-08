@@ -87,6 +87,8 @@ Task("Component")
     .IsDependentOn("NuGet")
     .Does(()=>
 {
+	if(!version.Contains("beta"))
+	{
     // Clear out xml files from build (they interfere with the component packaging)
 	//DeleteFiles ("./Build/**/*.xml");
 
@@ -100,6 +102,7 @@ Task("Component")
 
 	// Package both components
 	//PackageComponent ("./component/", xamCompSettings);
+	}
 });
 
 //Build the component, which build samples, nugets, and libraries

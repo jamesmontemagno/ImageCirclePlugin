@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCircle.Forms.Plugin.Abstractions", "..\src\ImageCircle.Forms.Plugin.Abstractions\ImageCircle.Forms.Plugin.Abstractions.csproj", "{14C534B6-1984-41A9-A384-D3A5508588E3}"
 EndProject
@@ -31,13 +31,20 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TestAppsCircles", "TestApps
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppsCircles.UWP", "TestAppsCircles\TestAppsCircles.UWP\TestAppsCircles.UWP.csproj", "{2E67D1A4-B517-4D89-9F49-6E3D048CD781}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD9A1B04-74BD-427E-8FEB-F1241471F712}"
+	ProjectSection(SolutionItems) = preProject
+		..\appveyor.yml = ..\appveyor.yml
+		..\build.cake = ..\build.cake
+		..\nuget\Plugin.nuspec = ..\nuget\Plugin.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		TestAppsCircles\TestAppsCircles\TestAppsCircles.projitems*{239ba275-b4a4-46c8-b87a-bf5975f88efd}*SharedItemsImports = 4
+		TestAppsCircles\TestAppsCircles\TestAppsCircles.projitems*{2e67d1a4-b517-4d89-9f49-6e3d048cd781}*SharedItemsImports = 4
 		TestAppsCircles\TestAppsCircles\TestAppsCircles.projitems*{61c3066c-0237-4606-8434-f5626acaf29e}*SharedItemsImports = 4
 		TestAppsCircles\TestAppsCircles\TestAppsCircles.projitems*{844b9e44-f6e3-490f-8ad7-bbd070010086}*SharedItemsImports = 4
 		TestAppsCircles\TestAppsCircles\TestAppsCircles.projitems*{fd4e1f85-421f-4c06-9752-4faded914f17}*SharedItemsImports = 13
-		TestAppsCircles\TestAppsCircles\TestAppsCircles.projitems*{2e67d1a4-b517-4d89-9f49-6e3d048cd781}*SharedItemsImports = 4
-		TestAppsCircles\TestAppsCircles\TestAppsCircles.projitems*{239ba275-b4a4-46c8-b87a-bf5975f88efd}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
