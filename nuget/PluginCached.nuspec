@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.8.1">
        <id>XamForms.FFImageLoading.ImageCircle</id>
-       <version>0.0.1-beta1</version>
+       <version>$version$</version>
        <title>Image Circle Control for Xamarin.Forms w/FFImageLoading</title>
        <authors>James Montemagno</authors>
        <owners>James Montemagno</owners>
