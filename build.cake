@@ -81,12 +81,6 @@ Task ("NuGet")
 		BasePath = "./",
 	});	
 
-	NuGetPack ("./nuget/PluginCached.nuspec", new NuGetPackSettings { 
-		Version = "0.0.1-beta",
-		Verbosity = NuGetVerbosity.Detailed,
-		OutputDirectory = "./Build/nuget/",
-		BasePath = "./",
-	});
 });
 
 Task("Component")
