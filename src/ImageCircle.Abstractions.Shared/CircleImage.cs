@@ -6,7 +6,12 @@ namespace ImageCircle.Forms.Plugin.Abstractions
     /// <summary>
     /// ImageCircle Interface
     /// </summary>
+
+#if CACHED
+    public class CircleImage : FFImageLoading.Forms.CachedImage
+#else
     public class CircleImage : Image
+#endif
     {
         /// <summary>
         /// Thickness property of border

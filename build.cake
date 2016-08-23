@@ -80,6 +80,13 @@ Task ("NuGet")
 		OutputDirectory = "./Build/nuget/",
 		BasePath = "./",
 	});	
+
+	NuGetPack ("./nuget/PluginCached.nuspec", new NuGetPackSettings { 
+		Version = version,
+		Verbosity = NuGetVerbosity.Detailed,
+		OutputDirectory = "./Build/nuget/",
+		BasePath = "./",
+	});
 });
 
 Task("Component")

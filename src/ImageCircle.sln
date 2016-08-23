@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCircle.Forms.Plugin.Abstractions", "ImageCircle.Forms.Plugin.Abstractions\ImageCircle.Forms.Plugin.Abstractions.csproj", "{14C534B6-1984-41A9-A384-D3A5508588E3}"
 EndProject
@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\appveyor.yml = ..\appveyor.yml
 		..\build.cake = ..\build.cake
 		..\nuget\Plugin.nuspec = ..\nuget\Plugin.nuspec
+		..\nuget\PluginCached.nuspec = ..\nuget\PluginCached.nuspec
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
@@ -27,7 +28,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCircle.Forms.Plugin.Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCircle.Forms.Plugin.UWP", "ImageCircle.Forms.Plugin.UWP\ImageCircle.Forms.Plugin.UWP.csproj", "{CB85DF64-FC61-4E8E-9E98-C630D4EA3E30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCircle.Forms.Plugin.Abstractions.FF", "ImageCircle.Forms.Plugin.Abstractions.FF\ImageCircle.Forms.Plugin.Abstractions.FF.csproj", "{07F29054-AC86-4755-B541-0CE37D9746B3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ImageCircle.Abstractions.Shared", "ImageCircle.Abstractions.Shared\ImageCircle.Abstractions.Shared.shproj", "{BFEEDE22-DEEE-4796-ACB9-D5B9CDDECCA5}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ImageCircle.Abstractions.Shared\ImageCircle.Abstractions.Shared.projitems*{07f29054-ac86-4755-b541-0ce37d9746b3}*SharedItemsImports = 4
+		ImageCircle.Abstractions.Shared\ImageCircle.Abstractions.Shared.projitems*{14c534b6-1984-41a9-a384-d3a5508588e3}*SharedItemsImports = 4
+		ImageCircle.Abstractions.Shared\ImageCircle.Abstractions.Shared.projitems*{bfeede22-deee-4796-acb9-d5b9cddecca5}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM
@@ -411,6 +421,54 @@ Global
 		{CB85DF64-FC61-4E8E-9E98-C630D4EA3E30}.Release|x64.Build.0 = Release|x64
 		{CB85DF64-FC61-4E8E-9E98-C630D4EA3E30}.Release|x86.ActiveCfg = Release|x86
 		{CB85DF64-FC61-4E8E-9E98-C630D4EA3E30}.Release|x86.Build.0 = Release|x86
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|ARM.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|x64.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|x64.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Ad-Hoc|x86.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|ARM.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|ARM.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|x64.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|x64.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.AppStore|x86.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|ARM.Build.0 = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|x64.Build.0 = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Debug|x86.Build.0 = Debug|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|ARM.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|ARM.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|iPhone.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|x64.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|x64.Build.0 = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|x86.ActiveCfg = Release|Any CPU
+		{07F29054-AC86-4755-B541-0CE37D9746B3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
