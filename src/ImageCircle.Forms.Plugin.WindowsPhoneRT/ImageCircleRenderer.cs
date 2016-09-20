@@ -135,9 +135,9 @@ namespace ImageCircle.Forms.Plugin.WindowsPhoneRT
                 {
                     bitmapImage = new BitmapImage((Element.Source as UriImageSource).Uri);
                 }
-                else if(file is StreamImageSource)
+                else if (file is StreamImageSource)
                 {
-                    var handler = new StreamImagesourceHandler();
+                    var handler = new StreamImageSourceHandler();
                     var imageSource = await handler.LoadImageAsync(file);
 
                     if (imageSource != null)
@@ -161,41 +161,11 @@ namespace ImageCircle.Forms.Plugin.WindowsPhoneRT
                     };
                 }
 
-                /*var handler = GetHandler(file);
-                var imageSource = await handler.LoadImageAsync(file);
-
-                if (imageSource != null)
-                {
-                    Control.Fill = new ImageBrush
-                    {
-                        ImageSource = imageSource,
-                        Stretch = Stretch.UniformToFill,
-                    };
-                }*/
             }
             catch
             {
                 System.Diagnostics.Debug.WriteLine("Unable to create circle image, falling back to background color.");
             }
         }
-
-        private static IImageSourceHandler GetHandler(Xamarin.Forms.ImageSource source)
-        {
-            IImageSourceHandler returnValue = null;
-            if (source is UriImageSource)
-            {
-                returnValue = new ImageLoaderSourceHandler();
-            }
-            else if (source is FileImageSource)
-            {
-                returnValue = new FileImageSourceHandler();
-            }
-            else if (source is StreamImageSource)
-            {
-                returnValue = new StreamImagesourceHandler();
-            }
-            return returnValue;
-        }
-
     }
 }
