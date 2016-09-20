@@ -37,9 +37,7 @@
     <DocumentationFile>bin\iPhone\Release\ImageCircle.Forms.Plugin.iOS.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\ImageCircle.Forms.Plugin.iOS\ImageCircleRenderer.cs">
-      <Link>ImageCircleRenderer.cs</Link>
-    </Compile>
+    <Compile Include="ImageCircleRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
