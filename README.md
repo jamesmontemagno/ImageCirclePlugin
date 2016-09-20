@@ -23,13 +23,12 @@ You must do this AFTER you call Xamarin.Forms.Init();
 |Platform|Supported|Version|
 | ------------------- | :-----------: | :------------------: |
 |Xamarin.iOS|Yes|iOS 7+|
-|Xamarin.iOS Unified|Yes|iOS 7+|
 |Xamarin.Android|Yes|API 14+|
 |Windows Phone Silverlight|Yes|8.0+|
 |Windows Phone RT|Yes|8.1+|
 |Windows Store RT|Yes|8.1+|
 |Windows 10 UWP|Yes|10+|
-|Xamarin.Mac|---||
+|Xamarin.Mac|No||
 
 #### Usage
 Instead of using an Image simply use a CircleImage instead!
