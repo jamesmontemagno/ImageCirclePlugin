@@ -82,16 +82,29 @@ You can also set ```FillColor``` to the Forms.Color to fill the circle. DO NOT s
 
 These are supported in iOS, Android, WinRT, and UWP (not on Windows Phone 8 Silverlight).
 
-**Final Builds**
+### Final Builds
 For linking you may need to add:
 
-Android:
-
+#### Android:
+```
 ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android;
-
-iOS:
-
+```
+#### iOS:
+```
 --linkskip=ImageCircle.Forms.Plugin.iOS --linkskip=ImageCircle.Forms.Plugin.Abstractions
+```
+
+#### UWP:
+Be sure to read through the trouble shooing for UWP with .NET Native for your final package. You should add the package to the Init call of Xamarin.Forms such as:
+
+```
+var rendererAssemblies = new[]
+{
+    typeof(ImageCircleRendererr).GetTypeInfo().Assembly
+};
+Xamarin.Forms.Forms.Init(e, rendererAssemblies);
+
+```
 
 
 #### License
