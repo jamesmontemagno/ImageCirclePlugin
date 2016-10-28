@@ -95,7 +95,7 @@ ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android;
 ```
 
 #### UWP:
-Be sure to read through the trouble shooing for UWP with .NET Native for your final package. You should add the package to the Init call of Xamarin.Forms such as:
+Be sure to read through the [troubleshooting for UWP with .NET Native](https://developer.xamarin.com/guides/xamarin-forms/platform-features/windows/installation/universal/#Troubleshooting) for your final package. You should add the package to the Init call of Xamarin.Forms such as:
 
 ```
 var rendererAssemblies = new[]
