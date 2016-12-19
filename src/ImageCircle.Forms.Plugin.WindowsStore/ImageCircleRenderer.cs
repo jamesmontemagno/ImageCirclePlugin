@@ -49,15 +49,15 @@ namespace ImageCircle.Forms.Plugin.WindowsStore
 			base.OnElementPropertyChanged(sender, e);
 			if (Control != null)
 			{
-				var min = Math.Min(Element.Width, Element.Height) / 2.0f;
-				if (min <= 0)
+                var min = Math.Min(Element.Width, Element.Height);
+				if (min / 2.0f <= 0)
 					return;
-
+                
 				try
 				{
 
-					Control.Width = Element.Width;
-					Control.Height = Element.Height;
+					Control.Width = min;
+					Control.Height = min;
 					
 					// That will be our fallback fill if can't make sense of the ImageSource.
 					var color = ((ImageCircle.Forms.Plugin.Abstractions.CircleImage)Element).BorderColor;

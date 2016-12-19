@@ -66,15 +66,15 @@ namespace ImageCircle.Forms.Plugin.WindowsPhoneRT
 
 
 
-            var min = Math.Min(Element.Width, Element.Height) / 2.0f;
-            if (min <= 0)
+            var min = Math.Min(Element.Width, Element.Height);
+            if (min / 2.0f <= 0)
                 return;
 
             try
             {
 
-                Control.Width = Element.Width;
-                Control.Height = Element.Height;
+                Control.Width = min;
+                Control.Height = min;
 
                 // Fill background color
                 var color = ((CircleImage)Element).FillColor;
