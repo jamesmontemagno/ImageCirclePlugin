@@ -14,12 +14,12 @@
          Custom control for your Xamarin.Forms project to turn your images into elegant circle images.
          Customizable border thickness and color.
          Ensure you call ImageCircleRenderer.Init() on each platform!
-         Built against: 2.3.2.127
+         Built against: 2.3.3.180
        </description>
        <summary>Use a Circle Image in your Xamarin.Forms projects! Ensure you call ImageCircleRenderer.Init() on each platform!</summary>
        <tags>xamarin, pcl, xam.pcl, uwp, uwa, windows phone, winphone, wp8, android, xamarin.forms, ios</tags>
        <dependencies>
-         <dependency id="Xamarin.Forms" version="2.3.2.127" />
+         <dependency id="Xamarin.Forms" version="2.3.3.180" />
        </dependencies>
      <releaseNotes>
      </releaseNotes>
