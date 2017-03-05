@@ -6,6 +6,8 @@ using Xamarin.Forms.Platform.iOS;
 using System.ComponentModel;
 using System.Diagnostics;
 using Foundation;
+using CoreAnimation;
+using CoreGraphics;
 
 [assembly: ExportRenderer(typeof(CircleImage), typeof(ImageCircleRenderer))]
 namespace ImageCircle.Forms.Plugin.iOS
@@ -57,12 +59,19 @@ namespace ImageCircle.Forms.Plugin.iOS
             try
             {
                 var min = Math.Min(Element.Width, Element.Height);
-                Control.Layer.CornerRadius = (float)(min / 2.0);
+                Control.Layer.CornerRadius = (nfloat)(min / 2.0);
                 Control.Layer.MasksToBounds = false;
-                Control.Layer.BorderColor = ((CircleImage)Element).BorderColor.ToCGColor();
-                Control.Layer.BorderWidth = ((CircleImage)Element).BorderThickness;
                 Control.BackgroundColor = ((CircleImage)Element).FillColor.ToUIColor();
                 Control.ClipsToBounds = true;
+
+                var borderThickness = ((CircleImage)Element).BorderThickness;
+                var externalBorder = new CALayer();
+                externalBorder.CornerRadius = Control.Layer.CornerRadius;
+                externalBorder.Frame = new CGRect(-.5, -.5, min + 1, min + 1);
+                externalBorder.BorderColor = ((CircleImage)Element).BorderColor.ToCGColor();
+                externalBorder.BorderWidth = ((CircleImage)Element).BorderThickness;
+
+                Control.Layer.AddSublayer(externalBorder);
             }
             catch (Exception ex)
             {
