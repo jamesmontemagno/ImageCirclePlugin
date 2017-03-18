@@ -105,6 +105,7 @@ namespace ImageCircle.Forms.Plugin.Droid
 
                 var result = base.DrawChild(canvas, child, drawingTime);
 
+                path.Dispose();
                 canvas.Restore();
 
                 path = new Path();
