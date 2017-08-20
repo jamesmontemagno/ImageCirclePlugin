@@ -59,20 +59,19 @@ Then add the xaml:
 ```xml
 <controls:CircleImage Source="{Binding Image}" Aspect="AspectFill">
   <controls:CircleImage.WidthRequest>
-    <OnPlatform x:TypeArguments="x:Double"
-      iOS="55"
-      Android="55"
-      WinPhone="75"/>
-   </controls:CircleImage.WidthRequest>
-<controls:CircleImage.HeightRequest>
-    <OnPlatform x:TypeArguments="x:Double"
-      iOS="55"
-      Android="55"
-      WinPhone="75"/>
-   </controls:CircleImage.HeightRequest>
+    <OnPlatform x:TypeArguments="x:Double">
+      <On Platform="Android, iOS">55</On>
+      <On Platform="WinPhone">75</On>
+    </OnPlatform>
+  </controls:CircleImage.WidthRequest>
+  <controls:CircleImage.HeightRequest>
+    <OnPlatform x:TypeArguments="x:Double">
+      <On Platform="Android, iOS">55</On>
+      <On Platform="WinPhone">75</On>
+    </OnPlatform>
+  </controls:CircleImage.HeightRequest>
 </controls:CircleImage>
 ```
-
 
 **Bindable Properties**
 
