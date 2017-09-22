@@ -1,4 +1,6 @@
 version: 1.8.2.{build}-beta
+image: Visual Studio 2017
+configuration: Release
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
@@ -9,7 +11,7 @@ build_script:
 - cmd: >-
     powershell .\install-android-sdk.ps1
 
-    powershell .\bootstrapper.ps1 -Target Default -Verbosity diagnostic
+    powershell .\build.ps1 -Target Default -Verbosity diagnostic
 artifacts:
 - path: ./Build/nuget/*.nupkg
   name: NuGet
