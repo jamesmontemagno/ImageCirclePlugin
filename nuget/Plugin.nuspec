@@ -63,7 +63,7 @@
      <file src="src\ImageCircle.Forms.Plugin.Android\bin\Release\ImageCircle.Forms.Plugin.*" target="lib\MonoAndroid10" />
 
      <!--Xamarin.iOS-->
-     <file src="src\ImageCircle.Forms.Plugin.iOS\bin\iPhone\Release\ImageCircle.Forms.Plugin.*" target="lib\Xamarin.iOS10" />
+     <file src="src\ImageCircle.Forms.Plugin.iOSUnified\bin\iPhone\Release\ImageCircle.Forms.Plugin.*" target="lib\Xamarin.iOS10" />
 
      <!--UWP-->
      <file src="src\ImageCircle.Forms.Plugin.UWP\bin\Release\ImageCircle.Forms.Plugin.*" target="lib\UAP10" />
