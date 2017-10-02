@@ -47,6 +47,7 @@ namespace ImageCircle.Forms.Plugin.Droid
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
+            
 
             if (e.PropertyName == CircleImage.BorderColorProperty.PropertyName ||
               e.PropertyName == CircleImage.BorderThicknessProperty.PropertyName ||
@@ -69,19 +70,19 @@ namespace ImageCircle.Forms.Plugin.Droid
             try
             {
                 
-                var radius = Math.Min(Width, Height) / 2;
+                var radius = (float)Math.Min(Width, Height) / 2f;
 
-                var borderThickness = (float)((CircleImage)Element).BorderThickness;
+                var borderThickness = ((CircleImage)Element).BorderThickness;
 
-                int strokeWidth = 0;
+                float strokeWidth = 0f;
 
                 if (borderThickness > 0)
                 {
                     var logicalDensity = Xamarin.Forms.Forms.Context.Resources.DisplayMetrics.Density;
-                    strokeWidth = (int)Math.Ceiling(borderThickness * logicalDensity + .5f);
+                    strokeWidth = (float)Math.Ceiling(borderThickness * logicalDensity + .5f);
                 }
 
-                radius -= strokeWidth / 2;
+                radius -= strokeWidth / 2f;
 
 
                
@@ -109,7 +110,7 @@ namespace ImageCircle.Forms.Plugin.Droid
                 canvas.Restore();
 
                 path = new Path();
-                path.AddCircle(Width / 2, Height / 2, radius, Path.Direction.Ccw);
+                path.AddCircle(Width / 2f, Height / 2f, radius, Path.Direction.Ccw);
                 
 
                 if(strokeWidth > 0.0f)

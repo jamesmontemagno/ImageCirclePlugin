@@ -1,10 +1,6 @@
-﻿#if WINDOWS_UWP
+﻿
 using ImageCircle.Forms.Plugin.UWP;
 using Xamarin.Forms.Platform.UWP;
-#else
-using ImageCircle.Forms.Plugin.WindowsPhoneRT;
-using Xamarin.Forms.Platform.WinRT;
-#endif
 using System;
 using System.IO;
 using Windows.ApplicationModel;
@@ -16,11 +12,7 @@ using Xamarin.Forms;
 using ImageCircle.Forms.Plugin.Abstractions;
 
 [assembly: ExportRenderer(typeof(CircleImage), typeof(ImageCircleRenderer))]
-#if WINDOWS_UWP
 namespace ImageCircle.Forms.Plugin.UWP
-#else
-namespace ImageCircle.Forms.Plugin.WindowsPhoneRT
-#endif
 {
     /// <summary>
     /// ImageCircle Implementation
@@ -103,6 +95,9 @@ namespace ImageCircle.Forms.Plugin.WindowsPhoneRT
                     e.PropertyName == VisualElement.RotationYProperty.PropertyName ||
                     e.PropertyName == VisualElement.RotationXProperty.PropertyName ||
                     e.PropertyName == VisualElement.RotationProperty.PropertyName ||
+                    e.PropertyName == CircleImage.BorderThicknessProperty.PropertyName ||
+                    e.PropertyName == CircleImage.BorderColorProperty.PropertyName ||
+                    e.PropertyName == CircleImage.FillColorProperty.PropertyName ||
                     e.PropertyName == VisualElement.AnchorXProperty.PropertyName ||
                     e.PropertyName == VisualElement.AnchorYProperty.PropertyName;
 
@@ -157,7 +152,6 @@ namespace ImageCircle.Forms.Plugin.WindowsPhoneRT
                     {
                         ImageSource = bitmapImage,
                         Stretch = Stretch.UniformToFill,
-
                     };
                 }
 

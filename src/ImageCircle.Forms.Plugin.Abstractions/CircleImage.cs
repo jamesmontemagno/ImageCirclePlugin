@@ -13,16 +13,16 @@ namespace ImageCircle.Forms.Plugin.Abstractions
         /// </summary>
         public static readonly BindableProperty BorderThicknessProperty =
           BindableProperty.Create(propertyName: nameof(BorderThickness), 
-              returnType: typeof(int),
+              returnType: typeof(float),
               declaringType: typeof(CircleImage),
-              defaultValue: 0);
+              defaultValue: 0F);
 
         /// <summary>
         /// Border thickness of circle image
         /// </summary>
-        public int BorderThickness
+        public float BorderThickness
         {
-            get { return (int)GetValue(BorderThicknessProperty); }
+            get { return (float)GetValue(BorderThicknessProperty); }
             set { SetValue(BorderThicknessProperty, value); }
         }
 

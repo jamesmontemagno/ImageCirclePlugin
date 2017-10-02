@@ -109,15 +109,13 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\ImageCircle.Forms.Plugin.WindowsPhoneRT\ImageCircleRenderer.cs">
-      <Link>ImageCircleRenderer.cs</Link>
-    </Compile>
+    <Compile Include="ImageCircleRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Properties\ImageCircle.Forms.Plugin.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ImageCircle.Forms.Plugin.Abstractions\ImageCircle.Forms.Plugin.Abstractions.csproj">
-      <Project>{14c534b6-1984-41a9-a384-d3a5508588e3}</Project>
+      <Project>{1fab52ad-f3ba-423c-afa1-e21700aa96f4}</Project>
       <Name>ImageCircle.Forms.Plugin.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>

@@ -14,69 +14,60 @@
          Custom control for your Xamarin.Forms project ot turn your images into elegant circle images.
          Customizable border thickness and color.
          Ensure you call ImageCircleRenderer.Init() on each platform!
-         Built against: 2.3.2.127
+         Built against: 2.4.0.282
        </description>
        <summary>Use a Circle Image in your Xamarin.Forms projects! Ensure you call ImageCircleRenderer.Init() on each platform!</summary>
        <tags>xamarin, pcl, xam.pcl, uwp, uwa, windows phone, winphone, wp8, android, xamarin.forms, ios</tags>
-       <dependencies>
-         <dependency id="Xamarin.Forms" version="2.3.2.127" />
-       </dependencies>
      <releaseNotes>
      </releaseNotes>
+     <dependencies>
+       <group targetFramework="net">
+       </group>
+       <group targetFramework="win">
+       </group>
+       <group targetFramework="wp">
+       </group>
+       <group targetFramework="wpa">
+       </group>
+       <group targetFramework="netstandard1.0">
+         <dependency id="NETStandard.Library" version="1.6.1" />
+         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+       </group>
+       <group targetFramework="MonoAndroid10">
+         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+       </group>
+       <group targetFramework="Xamarin.iOS10">
+         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+       </group>
+       <group targetFramework="Xamarin.Mac20">
+       </group>
+       <group targetFramework="portable-net45+win+wpa81+wp80">
+         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+       </group>
+       <group targetFramework="uap">
+         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+       </group>
+       <group targetFramework="dotnet">
+       </group>
+       <group targetFramework="xamarintvos">
+       </group>
+       <group targetFramework="xamarinwatchos">
+       </group>
+     </dependencies>
    </metadata>
    <files>
-      <!--Core-->
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.dll" target="lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.xml" target="lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.pdb" target="lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.pdb" />
+     <!--Standard/PCL-->
+     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\netstandard1.0\ImageCircle.Forms.Plugin.*" target="lib\netstandard1.0" />
 
-     <!--Win Phone Silverlight-->
-     <file src="src\ImageCircle.Forms.Plugin.WindowsPhone\bin\Release\ImageCircle.Forms.Plugin.WindowsPhone.dll" target="lib\wp8\ImageCircle.Forms.Plugin.WindowsPhone.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.WindowsPhone\bin\Release\ImageCircle.Forms.Plugin.WindowsPhone.xml" target="lib\wp8\ImageCircle.Forms.Plugin.WindowsPhone.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.WindowsPhone\bin\Release\ImageCircle.Forms.Plugin.WindowsPhone.pdb" target="lib\wp8\ImageCircle.Forms.Plugin.WindowsPhone.pdb" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.dll" target="lib\wp8\ImageCircle.Forms.Plugin.Abstractions.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.xml" target="lib\wp8\ImageCircle.Forms.Plugin.Abstractions.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.pdb" target="lib\wp8\ImageCircle.Forms.Plugin.Abstractions.pdb" />
+     <!--Xamarin.Android-->
+     <file src="src\ImageCircle.Forms.Plugin.Android\bin\Release\ImageCircle.Forms.Plugin.*" target="lib\MonoAndroid10" />
 
-     <!--Win Phone RT-->
-     <file src="src\ImageCircle.Forms.Plugin.WindowsPhoneRT\bin\Release\ImageCircle.Forms.Plugin.WindowsPhoneRT.dll" target="lib\wpa81\ImageCircle.Forms.Plugin.WindowsPhoneRT.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.WindowsPhoneRT\bin\Release\ImageCircle.Forms.Plugin.WindowsPhoneRT.xml" target="lib\wpa81\ImageCircle.Forms.Plugin.WindowsPhoneRT.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.WindowsPhoneRT\bin\Release\ImageCircle.Forms.Plugin.WindowsPhoneRT.pdb" target="lib\wpa81\ImageCircle.Forms.Plugin.WindowsPhoneRT.pdb" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.dll" target="lib\wpa81\ImageCircle.Forms.Plugin.Abstractions.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.xml" target="lib\wpa81\ImageCircle.Forms.Plugin.Abstractions.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.pdb" target="lib\wpa81\ImageCircle.Forms.Plugin.Abstractions.pdb" />
+     <!--Xamarin.iOS-->
+     <file src="src\ImageCircle.Forms.Plugin.iOS\bin\iPhone\Release\ImageCircle.Forms.Plugin.*" target="lib\Xamarin.iOS10" />
 
-     <!--Win Store-->
-     <file src="src\ImageCircle.Forms.Plugin.WindowsStore\bin\Release\ImageCircle.Forms.Plugin.WindowsStore.dll" target="lib\win81\ImageCircle.Forms.Plugin.WindowsStore.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.WindowsStore\bin\Release\ImageCircle.Forms.Plugin.WindowsStore.xml" target="lib\win81\ImageCircle.Forms.Plugin.WindowsStore.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.WindowsStore\bin\Release\ImageCircle.Forms.Plugin.WindowsStore.pdb" target="lib\win81\ImageCircle.Forms.Plugin.WindowsStore.pdb" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.dll" target="lib\win81\ImageCircle.Forms.Plugin.Abstractions.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.xml" target="lib\win81\ImageCircle.Forms.Plugin.Abstractions.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.pdb" target="lib\win81\ImageCircle.Forms.Plugin.Abstractions.pdb" />
+     <!--UWP-->
+     <file src="src\ImageCircle.Forms.Plugin.UWP\bin\Release\ImageCircle.Forms.Plugin.*" target="lib\UAP10" />
 
-       <!--UWP-->
-       <file src="src\ImageCircle.Forms.Plugin.UWP\bin\Release\ImageCircle.Forms.Plugin.UWP.dll" target="lib\UAP10\ImageCircle.Forms.Plugin.UWP.dll" />
-       <file src="src\ImageCircle.Forms.Plugin.UWP\bin\Release\ImageCircle.Forms.Plugin.UWP.xml" target="lib\UAP10\ImageCircle.Forms.Plugin.UWP.xml" />
-       <file src="src\ImageCircle.Forms.Plugin.UWP\bin\Release\ImageCircle.Forms.Plugin.UWP.pdb" target="lib\UAP10\ImageCircle.Forms.Plugin.UWP.pdb" />
-       <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.dll" target="lib\UAP10\ImageCircle.Forms.Plugin.Abstractions.dll" />
-       <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.xml" target="lib\UAP10\ImageCircle.Forms.Plugin.Abstractions.xml" />
-       <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.pdb" target="lib\UAP10\ImageCircle.Forms.Plugin.Abstractions.pdb" />
-
-
-
-       <!--Xamarin.Android-->
-     <file src="src\ImageCircle.Forms.Plugin.Android\bin\Release\ImageCircle.Forms.Plugin.Android.dll" target="lib\MonoAndroid10\ImageCircle.Forms.Plugin.Android.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.Android\bin\Release\ImageCircle.Forms.Plugin.Android.xml" target="lib\MonoAndroid10\ImageCircle.Forms.Plugin.Android.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.Android\bin\Release\ImageCircle.Forms.Plugin.Android.pdb" target="lib\MonoAndroid10\ImageCircle.Forms.Plugin.Android.pdb" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.dll" target="lib\MonoAndroid10\ImageCircle.Forms.Plugin.Abstractions.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.xml" target="lib\MonoAndroid10\ImageCircle.Forms.Plugin.Abstractions.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.pdb" target="lib\MonoAndroid10\ImageCircle.Forms.Plugin.Abstractions.pdb" />
-
-     <!--Xamarin.iOSUnified-->
-     <file src="src\ImageCircle.Forms.Plugin.iOSUnified\bin\iPhone\Release\ImageCircle.Forms.Plugin.iOS.dll" target="lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.iOSUnified\bin\iPhone\Release\ImageCircle.Forms.Plugin.iOS.xml" target="lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.xml" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.dll" target="lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll" />
-     <file src="src\ImageCircle.Forms.Plugin.Abstractions\bin\Release\ImageCircle.Forms.Plugin.Abstractions.xml" target="lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.xml" />
-      
+   
    </files>
 </package>
