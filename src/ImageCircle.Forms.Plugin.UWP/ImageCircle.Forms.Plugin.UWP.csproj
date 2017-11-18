@@ -111,7 +111,9 @@
   <ItemGroup>
     <Compile Include="ImageCircleRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Properties\ImageCircle.Forms.Plugin.UWP.rd.xml" />
+    <EmbeddedResource Include="Properties\ImageCircle.Forms.Plugin.UWP.rd.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ImageCircle.Forms.Plugin.Abstractions\ImageCircle.Forms.Plugin.Abstractions.csproj">
