@@ -67,7 +67,7 @@
 
      <!--UWP-->
      <file src="src\ImageCircle.Forms.Plugin.UWP\bin\Release\ImageCircle.Forms.Plugin.*" target="lib\UAP10" />
-
+     <file src="src\ImageCircle.Forms.Plugin.UWP\Properties\*.rd.xml" target="lib\UAP10\ImageCircle.Forms.Plugin.UWP\Properties" />
    
    </files>
 </package>
