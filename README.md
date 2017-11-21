@@ -95,7 +95,7 @@ Be sure to read through the [troubleshooting for UWP with .NET Native](https://d
 ```
 var rendererAssemblies = new[]
 {
-    typeof(ImageCircleRendererr).GetTypeInfo().Assembly
+    typeof(ImageCircleRenderer).GetTypeInfo().Assembly
 };
 Xamarin.Forms.Forms.Init(e, rendererAssemblies);
 
