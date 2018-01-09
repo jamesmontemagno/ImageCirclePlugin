@@ -14,7 +14,7 @@
          Custom control for your Xamarin.Forms project ot turn your images into elegant circle images.
          Customizable border thickness and color.
          Ensure you call ImageCircleRenderer.Init() on each platform!
-         Built against: 2.4.0.282
+         Built against: 2.5.0.121934
        </description>
        <summary>Use a Circle Image in your Xamarin.Forms projects! Ensure you call ImageCircleRenderer.Init() on each platform!</summary>
        <tags>xamarin, pcl, xam.pcl, uwp, uwa, windows phone, winphone, wp8, android, xamarin.forms, ios</tags>
@@ -31,21 +31,21 @@
        </group>
        <group targetFramework="netstandard1.0">
          <dependency id="NETStandard.Library" version="1.6.1" />
-         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+         <dependency id="Xamarin.Forms" version="2.5.0.121934"/>
        </group>
        <group targetFramework="MonoAndroid10">
-         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+         <dependency id="Xamarin.Forms" version="2.5.0.121934"/>
        </group>
        <group targetFramework="Xamarin.iOS10">
-         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+         <dependency id="Xamarin.Forms" version="2.5.0.121934"/>
        </group>
        <group targetFramework="Xamarin.Mac20">
        </group>
        <group targetFramework="portable-net45+win+wpa81+wp80">
-         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+         <dependency id="Xamarin.Forms" version="2.5.0.121934"/>
        </group>
        <group targetFramework="uap">
-         <dependency id="Xamarin.Forms" version="2.4.0.282"/>
+         <dependency id="Xamarin.Forms" version="2.5.0.121934"/>
        </group>
        <group targetFramework="dotnet">
        </group>
