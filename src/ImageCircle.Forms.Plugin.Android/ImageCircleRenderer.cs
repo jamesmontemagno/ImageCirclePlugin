@@ -8,6 +8,7 @@ using ImageCircle.Forms.Plugin.Droid;
 using System;
 using System.ComponentModel;
 using Color = Xamarin.Forms.Color;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(CircleImage), typeof(ImageCircleRenderer))]
 namespace ImageCircle.Forms.Plugin.Droid
@@ -18,6 +19,15 @@ namespace ImageCircle.Forms.Plugin.Droid
     [Preserve(AllMembers = true)]
     public class ImageCircleRenderer : ImageRenderer
     {
+        public ImageCircleRenderer() : base()
+        {
+
+        }
+
+        public ImageCircleRenderer(Context context) : base(context)
+        {
+
+        }
         /// <summary>
         /// Used for registration with dependency service
         /// </summary>
@@ -94,10 +104,12 @@ namespace ImageCircle.Forms.Plugin.Droid
                 canvas.Save();
                 canvas.ClipPath(path);
 
-               
 
-                var paint = new Paint();
-                paint.AntiAlias = true;
+
+                var paint = new Paint
+                {
+                    AntiAlias = true
+                };
                 paint.SetStyle(Paint.Style.Fill);
                 paint.Color = ((CircleImage)Element).FillColor.ToAndroid();
                 canvas.DrawPath(path, paint);
