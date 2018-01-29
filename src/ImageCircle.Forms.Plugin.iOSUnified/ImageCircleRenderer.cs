@@ -8,6 +8,7 @@ using System.Diagnostics;
 using Foundation;
 using CoreAnimation;
 using CoreGraphics;
+using System.Linq;
 
 [assembly: ExportRenderer(typeof(CircleImage), typeof(ImageCircleRenderer))]
 namespace ImageCircle.Forms.Plugin.iOS
@@ -65,7 +66,15 @@ namespace ImageCircle.Forms.Plugin.iOS
                 Control.ClipsToBounds = true;
 
                 var borderThickness = ((CircleImage)Element).BorderThickness;
+
+                //Remove previously added layers
+                var tempLayer = Control.Layer.Sublayers?
+                                       .Where(p=>p.Name == borderName)
+                                       .FirstOrDefault();
+                tempLayer?.RemoveFromSuperLayer();
+
                 var externalBorder = new CALayer();
+                externalBorder.Name = borderName;
                 externalBorder.CornerRadius = Control.Layer.CornerRadius;
                 externalBorder.Frame = new CGRect(-.5, -.5, min + 1, min + 1);
                 externalBorder.BorderColor = ((CircleImage)Element).BorderColor.ToCGColor();
@@ -78,5 +87,7 @@ namespace ImageCircle.Forms.Plugin.iOS
                 Debug.WriteLine("Unable to create circle image: " + ex);
             }
         }
+
+        const string borderName = "borderLayerName";
     }
 }
