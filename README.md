@@ -9,9 +9,9 @@ Simple but elegant way of display circle images in your Xamarin.Forms projects
  xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
  ```
 	
-	If using 2.0 it is:
+If using 2.0 it is:
 	
-	 ```
+```
  xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
  ```
 
