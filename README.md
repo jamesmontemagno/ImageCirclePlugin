@@ -8,6 +8,12 @@ Simple but elegant way of display circle images in your Xamarin.Forms projects
  ```
  xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
  ```
+	
+	If using 2.0 it is:
+	
+	 ```
+ xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+ ```
 
 #### Setup
 * Available on NuGet: https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Forms.ImageCircle.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle/)
@@ -56,6 +62,12 @@ First add the xmlns namespace:
 ```xml
 xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
 ```
+
+	If using 2.0 it is:
+	
+	```
+ xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+ ```
 
 Then add the xaml:
 
