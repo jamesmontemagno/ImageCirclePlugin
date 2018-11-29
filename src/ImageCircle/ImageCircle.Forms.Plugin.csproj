@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid71;Xamarin.iOS10;uap10.0.16299</TargetFrameworks>
+    <TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid71;Xamarin.iOS10;uap10.0.16299;Xamarin.Mac20</TargetFrameworks>
     <AssemblyName>ImageCircle.Forms.Plugin</AssemblyName>
     <RootNamespace>ImageCircle.Forms.Plugin</RootNamespace>
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
@@ -65,6 +65,10 @@
    <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
     <Compile Include="*.ios.cs" />
   </ItemGroup>
+	
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
+		<Compile Include="*.mac.cs" />
+	</ItemGroup>
 
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 
