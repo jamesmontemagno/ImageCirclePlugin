@@ -1,34 +1,35 @@
 ## Circle Image Control Plugin for Xamarin.Forms
 
-Simple but elegant way of display circle images in your Xamarin.Forms projects
+A simple and elegant way of displaying circle images in your Xamarin.Forms projects.
 
 ## When upgrading to 3.0
  Be sure to change the DLL name to:
  
- ```
+ ```xml
  xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
  ```
 	
 If using 2.0 it is:
 	
-```
+```xml
  xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
  ```
 
 #### Setup
-* Available on NuGet: https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle: [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Forms.ImageCircle.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle/)
+* Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Forms.ImageCircle.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle/)
+  *  [https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle](https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle)
 * Install into your PCL project and Client projects.
 * Build status: ![Build status](https://jamesmontemagno.visualstudio.com/_apis/public/build/definitions/6b79a378-ddd6-4e31-98ac-a12fcd68644c/16/badge)
 
 
 In your iOS, Android, and Windows projects call:
 
-```
-Xamarin.Forms.Init();//platform specific init
+```csharp
+Xamarin.Forms.Init(); //platform specific init
 ImageCircleRenderer.Init();
 ```
 
-You must do this AFTER you call Xamarin.Forms.Init();
+You must do this AFTER you call `Xamarin.Forms.Init();`
 
 **Platform Support**
 
@@ -41,8 +42,9 @@ You must do this AFTER you call Xamarin.Forms.Init();
 #### Usage
 Instead of using an Image simply use a CircleImage instead!
 
-You **MUST** set the width & height requests to the same value and you will want to use AspectFill. Here is a sample:
-```
+You **MUST** set the width & height requests to the same value and you will want to use `Aspect.AspectFill` for the value of the `Aspect` property. Here is a sample:
+
+```csharp
 new CircleImage
 {
   BorderColor = Color.White,
@@ -64,7 +66,7 @@ xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=Ima
 
 If using 2.0 it is:
 	
-```
+```xml
  xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
  ```
 
@@ -102,6 +104,7 @@ For linking you may need to add:
 ```
 ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android;
 ```
+
 #### iOS:
 ```
 --linkskip=ImageCircle.Forms.Plugin.iOS --linkskip=ImageCircle.Forms.Plugin.Abstractions
@@ -110,7 +113,7 @@ ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android;
 #### UWP:
 Be sure to read through the [troubleshooting for UWP with .NET Native](https://developer.xamarin.com/guides/xamarin-forms/platform-features/windows/installation/universal/#Troubleshooting) for your final package. You should add the package to the Init call of Xamarin.Forms such as:
 
-```
+```csharp
 var rendererAssemblies = new[]
 {
     typeof(ImageCircleRenderer).GetTypeInfo().Assembly
