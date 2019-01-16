@@ -114,18 +114,23 @@ namespace ImageCircle.Forms.Plugin.UWP
                 if (file is FileImageSource)
                 {
                     var fi = Element.Source as FileImageSource;
-                    var myFile = System.IO.Path.Combine(Package.Current.InstalledLocation.Path, fi.File);
-                    var myFolder = await StorageFolder.GetFolderFromPathAsync(System.IO.Path.GetDirectoryName(myFile));
+					
+					var file = fi.File;
+					bitmapImage = new BitmapImage(new Uri("ms-appx:///" + file));
+					
+					/*var myFile = System.IO.Path.Combine(Package.Current.InstalledLocation.Path, fi.File);
+					
+					var myFolder = await StorageFolder.GetFolderFromPathAsync(System.IO.Path.GetDirectoryName(myFile));
 
-                    using (Stream s = await myFolder.OpenStreamForReadAsync(System.IO.Path.GetFileName(myFile)))
+                    using (var s = await myFolder.OpenStreamForReadAsync(System.IO.Path.GetFileName(myFile)))
                     {
                         var memStream = new MemoryStream();
                         await s.CopyToAsync(memStream);
                         memStream.Position = 0;
                         bitmapImage = new BitmapImage();
                         bitmapImage.SetSource(memStream.AsRandomAccessStream());
-                    }
-                }
+                    }*/
+				}
                 else if (file is UriImageSource)
                 {
                     bitmapImage = new BitmapImage((Element.Source as UriImageSource).Uri);
@@ -148,7 +153,7 @@ namespace ImageCircle.Forms.Plugin.UWP
 
                 if (bitmapImage != null)
                 {
-                    Control.Fill = new ImageBrush
+					Control.Fill = new ImageBrush
                     {
                         ImageSource = bitmapImage,
                         Stretch = Stretch.UniformToFill,

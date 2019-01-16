@@ -104,6 +104,7 @@
     <None Include="TestAppsCircles.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="check.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -128,7 +129,7 @@
       <Version>6.0.6</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.0.0.446417</Version>
+      <Version>3.4.0.1009999</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

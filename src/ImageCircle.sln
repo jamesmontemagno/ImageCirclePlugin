@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49C6E954-C9FF-429A-A011-E647B388FA12}"
 	ProjectSection(SolutionItems) = preProject
 		..\.editorconfig = ..\.editorconfig
+		..\CHANGELOG.md = ..\CHANGELOG.md
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
@@ -28,6 +29,7 @@ Global
 		TestAppsCircles\TestAppsCircles.projitems*{239ba275-b4a4-46c8-b87a-bf5975f88efd}*SharedItemsImports = 4
 		TestAppsCircles\TestAppsCircles.projitems*{2e67d1a4-b517-4d89-9f49-6e3d048cd781}*SharedItemsImports = 4
 		TestAppsCircles\TestAppsCircles.projitems*{61c3066c-0237-4606-8434-f5626acaf29e}*SharedItemsImports = 4
+		TestAppsCircles\TestAppsCircles.projitems*{addf933d-e425-4f54-bda7-16f7bd5cb471}*SharedItemsImports = 4
 		TestAppsCircles\TestAppsCircles.projitems*{fd4e1f85-421f-4c06-9752-4faded914f17}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

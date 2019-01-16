@@ -63,7 +63,7 @@ namespace ImageCircle.Forms.Plugin.Droid
               e.PropertyName == CircleImage.BorderThicknessProperty.PropertyName ||
               e.PropertyName == CircleImage.FillColorProperty.PropertyName)
             {
-                this.Invalidate();
+                Invalidate();
             }
         }
 
@@ -84,11 +84,11 @@ namespace ImageCircle.Forms.Plugin.Droid
 
                 var borderThickness = ((CircleImage)Element).BorderThickness;
 
-                float strokeWidth = 0f;
+                var strokeWidth = 0f;
 
                 if (borderThickness > 0)
                 {
-                    var logicalDensity = Xamarin.Forms.Forms.Context.Resources.DisplayMetrics.Density;
+                    var logicalDensity = Android.App.Application.Context.Resources.DisplayMetrics.Density;
                     strokeWidth = (float)Math.Ceiling(borderThickness * logicalDensity + .5f);
                 }
 

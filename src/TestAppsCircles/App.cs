@@ -48,7 +48,7 @@ namespace TestAppsCircles
                         WidthRequest = 150,
                         Aspect = Aspect.AspectFill,
                         HorizontalOptions = LayoutOptions.Center,
-                        //Source = UriImageSource.FromUri(new Uri("http://upload.wikimedia.org/wikipedia/commons/5/53/Golden_Lion_Tamarin_Leontopithecus_rosalia.jpg"))
+                        Source = FileImageSource.FromFile("Assets/Square150x150Logo.png")
                       }),
                       new CircleImage
                       {
