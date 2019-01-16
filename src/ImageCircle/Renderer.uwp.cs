@@ -19,6 +19,9 @@ namespace ImageCircle.Forms.Plugin.UWP
     /// </summary>
     public class ImageCircleRenderer : ViewRenderer<Image, Ellipse>
     {
+
+		ImageBrush imageBrush = null;
+
         /// <summary>
         /// Used for registration with dependency service
         /// </summary>
@@ -68,22 +71,7 @@ namespace ImageCircle.Forms.Plugin.UWP
                 Control.Width = min;
                 Control.Height = min;
 
-                // Fill background color
-                var color = ((CircleImage)Element).FillColor;
-                Control.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(
-                    (byte)(color.A * 255),
-                    (byte)(color.R * 255),
-                    (byte)(color.G * 255),
-                    (byte)(color.B * 255)));
-
-                // Fill stroke
-                color = ((CircleImage)Element).BorderColor;
-                Control.StrokeThickness = ((CircleImage)Element).BorderThickness;
-                Control.Stroke = new SolidColorBrush(Windows.UI.Color.FromArgb(
-                   (byte)(color.A * 255),
-                   (byte)(color.R * 255),
-                   (byte)(color.G * 255),
-                   (byte)(color.B * 255)));
+                
 
                 var force = e.PropertyName == VisualElement.XProperty.PropertyName ||
                     e.PropertyName == VisualElement.YProperty.PropertyName ||
@@ -106,9 +94,32 @@ namespace ImageCircle.Forms.Plugin.UWP
                 if (file == Element.Source && !force)
                     return;
 
-                file = Element.Source;
+				// Fill background color
+				var color = ((CircleImage)Element).FillColor;
+				Control.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(
+					(byte)(color.A * 255),
+					(byte)(color.R * 255),
+					(byte)(color.G * 255),
+					(byte)(color.B * 255)));
 
-                BitmapImage bitmapImage = null;
+				// Fill stroke
+				color = ((CircleImage)Element).BorderColor;
+				Control.StrokeThickness = ((CircleImage)Element).BorderThickness;
+				Control.Stroke = new SolidColorBrush(Windows.UI.Color.FromArgb(
+				   (byte)(color.A * 255),
+				   (byte)(color.R * 255),
+				   (byte)(color.G * 255),
+				   (byte)(color.B * 255)));
+
+				if (file == Element.Source && imageBrush != null)
+				{
+					Control.Fill = imageBrush;
+					return;
+				}
+
+				BitmapImage bitmapImage = null;
+
+                file = Element.Source;
 
                 // Handle file images
                 if (file is FileImageSource)
@@ -142,7 +153,7 @@ namespace ImageCircle.Forms.Plugin.UWP
 
                     if (imageSource != null)
                     {
-                        Control.Fill = new ImageBrush
+                        Control.Fill = imageBrush =  new ImageBrush
                         {
                             ImageSource = imageSource,
                             Stretch = Stretch.UniformToFill,
@@ -153,7 +164,7 @@ namespace ImageCircle.Forms.Plugin.UWP
 
                 if (bitmapImage != null)
                 {
-					Control.Fill = new ImageBrush
+					Control.Fill = imageBrush = new ImageBrush
                     {
                         ImageSource = bitmapImage,
                         Stretch = Stretch.UniformToFill,
