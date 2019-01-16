@@ -84,6 +84,7 @@
 	</ItemGroup>
 
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
+		<Reference Include="netstandard" />
 		<Compile Include="*.mac.cs" />
 	</ItemGroup>
 
