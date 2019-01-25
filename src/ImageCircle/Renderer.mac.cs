@@ -16,10 +16,12 @@ namespace ImageCircle.Forms.Plugin.Mac
 	[Preserve(AllMembers = true)]
 	public class ImageCircleRenderer : ImageRenderer
 	{
-		/// <summary>
-		/// Used for registration with dependency service
-		/// </summary>
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+							  /// <summary>
+							  /// Used for registration with dependency service
+							  /// </summary>
 		public async static void Init()
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
 		{
 			var temp = DateTime.Now;
 		}

@@ -19,8 +19,10 @@ namespace ImageCircle.Forms.Plugin.Droid
     [Preserve(AllMembers = true)]
     public class ImageCircleRenderer : ImageRenderer
     {
-        public ImageCircleRenderer() : base()
-        {
+#pragma warning disable CS0618 // Type or member is obsolete
+		public ImageCircleRenderer() : base()
+#pragma warning restore CS0618 // Type or member is obsolete
+		{
 
         }
 
@@ -28,11 +30,13 @@ namespace ImageCircle.Forms.Plugin.Droid
         {
 
         }
-        /// <summary>
-        /// Used for registration with dependency service
-        /// </summary>
-        public async static void Init()
-        {
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+							  /// <summary>
+							  /// Used for registration with dependency service
+							  /// </summary>
+		public async static void Init()
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+		{
             var temp = DateTime.Now;
         }
         /// <summary>
