@@ -2,18 +2,12 @@
 
 A simple and elegant way of displaying circle images in your Xamarin.Forms projects.
 
-## When upgrading to 3.0
  Be sure to change the DLL name to:
  
  ```xml
  xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
  ```
-	
-If using 2.0 it is:
-	
-```xml
- xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
- ```
+
 
 #### Setup
 * Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Xam.Plugins.Forms.ImageCircle.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugins.Forms.ImageCircle/)
@@ -64,12 +58,6 @@ First add the xmlns namespace:
 xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
 ```
 
-If using 2.0 it is:
-	
-```xml
- xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
- ```
-
 Then add the xaml:
 
 ```xml
@@ -102,12 +90,12 @@ For linking you may need to add:
 
 #### Android:
 ```
-ImageCircle.Forms.Plugin.Abstractions;ImageCircle.Forms.Plugin.Android;
+ImageCircle.Forms.Plugin;
 ```
 
 #### iOS:
 ```
---linkskip=ImageCircle.Forms.Plugin.iOS --linkskip=ImageCircle.Forms.Plugin.Abstractions
+--linkskip=ImageCircle.Forms.Plugin
 ```
 
 #### UWP:
