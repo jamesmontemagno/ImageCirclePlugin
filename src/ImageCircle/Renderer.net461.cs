@@ -19,6 +19,18 @@ namespace ImageCircle.Forms.Plugin.WPF
 	/// </summary>
 	public class ImageCircleRenderer : ViewRenderer<Image, Ellipse>
 	{
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+		/// <summary>
+		/// Used for registration with dependency service
+		/// </summary>
+		public async static void Init()
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
+		{
+			var temp = DateTime.Now;
+		}
+
 		private ImageSource file;
 
 		/// <summary>

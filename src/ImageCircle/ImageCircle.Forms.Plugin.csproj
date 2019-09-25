@@ -1,7 +1,7 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/1.6.61">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;MonoAndroid80;MonoAndroid81;Xamarin.iOS10;uap10.0.16299;Xamarin.Mac20;net461</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;MonoAndroid71;MonoAndroid80;MonoAndroid81;Xamarin.iOS10;uap10.0.16299;Xamarin.Mac20;net461</TargetFrameworks>
 		<AssemblyName>ImageCircle.Forms.Plugin</AssemblyName>
 		<RootNamespace>ImageCircle.Forms.Plugin</RootNamespace>
 		<Product>$(AssemblyName) ($(TargetFramework))</Product>

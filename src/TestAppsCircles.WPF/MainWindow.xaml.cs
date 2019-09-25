@@ -12,7 +12,9 @@ namespace TestAppsCircles.WPF
 		public MainWindow()
 		{
 			InitializeComponent();
-            LoadApplication(new TestAppsCircles.App());
+			Forms.Init();
+            ImageCircle.Forms.Plugin.WPF.ImageCircleRenderer.Init();
+			LoadApplication(new TestAppsCircles.App());
 		}
 	}
 }
