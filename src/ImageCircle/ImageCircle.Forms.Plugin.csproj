@@ -1,7 +1,7 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/1.6.61">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;MonoAndroid71;MonoAndroid80;MonoAndroid81;Xamarin.iOS10;uap10.0.16299;Xamarin.Mac20</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;MonoAndroid71;MonoAndroid80;MonoAndroid81;Xamarin.iOS10;uap10.0.16299;Xamarin.Mac20;net461</TargetFrameworks>
 		<AssemblyName>ImageCircle.Forms.Plugin</AssemblyName>
 		<RootNamespace>ImageCircle.Forms.Plugin</RootNamespace>
 		<Product>$(AssemblyName) ($(TargetFramework))</Product>
@@ -88,4 +88,11 @@
 		<Compile Include="*.mac.cs" />
 	</ItemGroup>
 
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('net461')) ">
+		<Compile Include="*.net461.cs" />
+		<Reference Include="WindowsBase" />
+		<Reference Include="PresentationCore" />
+		<Reference Include="PresentationFramework" />
+		<PackageReference Include="Xamarin.Forms.Platform.WPF" Version="3.4.0.1009999" />
+	</ItemGroup>
 </Project>
